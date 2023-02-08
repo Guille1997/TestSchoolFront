@@ -1,0 +1,60 @@
+<div class="container-xl">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="”table-title”">
+        <div class="row">
+          <div class="col-sm-6">
+            <h4><b>Ver Alumno-Grado</b></h4>
+          </div>
+          <div class="”col-sm-6”">
+            <a
+              href="/IndexAlumnoGrado"
+              routerLink="/IndexAlumnoGrado"
+              class="btn btn-success back"
+              ><i class="fas fa-arrow-circle-lef"></i>Atras</a
+            >
+          </div>
+        </div>
+      </div>
+      <table
+        class="table table-striped table-hover table-bordered table-conten mt-5"
+      >
+        <tbody>
+          <tr>
+            <td>
+              <label><b>ID AlumnoGrado</b></label>
+            </td>
+            <td>
+              <span>{{ alumnoGrado.idAlumnoGrado }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>ID Alumno</b></label>
+            </td>
+            <td>
+              <span>{{ alumnoGrado.idAlumno }}</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label><b>Id Grado</b></label>
+            </td>
+            <td>
+              <span>{{ alumnoGrado.idGrado }}</span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label><b>Seccion</b></label>
+            </td>
+            <td>
+              <span>{{ alumnoGrado.seccion }}</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,75 @@
+<div class="container">
+  <h1>Crear Nuevo Profesor</h1>
+  <a href="#" routerLink="/IndexProfesor" class="btn btn-primary">Back</a>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group">
+      <label for="nombreProfesor">Nombre:</label>
+      <input
+        formControlName="nombreProfesor"
+        id="nombreProfesor"
+        type="text"
+        class="form-control"
+      />
+      <div
+        *ngIf="f['nombreProfesor'].touched && f['nombreProfesor'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="
+            f['nombreProfesor'].errors && f['nombreProfesor'].errors['required']
+          "
+        >
+          Nombre es requerido.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="apellidoProfesor">Apellido:</label>
+
+      <input
+        formControlName="apellidoProfesor"
+        id="apellidoProfesor"
+        type="text"
+        class="form-control"
+      />
+
+      <div
+        *ngIf="f['apellidoProfesor'].touched && f['apellidoProfesor'].invalid"
+        class="alert alert-danger"
+      >
+        <div
+          *ngIf="
+            f['apellidoProfesor'].errors &&
+            f['apellidoProfesor'].errors['required']
+          "
+        >
+          Apellido es requerido.
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="generoProfesor">Genero:</label>
+      <div class="d-flex flex-row">
+        <label for="generoProfesor">Femenino</label>
+        <div class="form-check form-switch">
+          <input
+            mdbCheckbox
+            class="form-check-input"
+            formControlName="generoProfesor"
+            type="checkbox"
+            id="generoProfesor"
+            [checked]="true"
+          />
+        </div>
+        <label for="generoProfesor">Masculino</label>
+      </div>
+    </div>
+
+    <br />
+    <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+      Submit
+    </button>
+  </form>
+</div>
